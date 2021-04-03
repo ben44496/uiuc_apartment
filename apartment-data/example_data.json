@@ -1,0 +1,24 @@
+{
+    "real-estate-agency-name" : [
+        {
+            "address" : "property", 
+            "options" : [
+                {
+                    "bed" : 0,
+                    "bath" : 0,
+                    "price" : 0,
+                    "floor-plan" : [
+                        {
+                            "description" : "null",
+                            "img" : "img.jpg"
+                        }
+                    ]
+                }
+            ],
+            "amenities" : [
+                "thing one"
+            ],
+            "website" : "http"
+        }
+    ]
+}

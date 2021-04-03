@@ -1,0 +1,66 @@
+{
+  "agency": "mhm",
+  "address": "102 S Lincoln Avenue",
+  "options": [
+    {
+      "bed": 2,
+      "bath": 1,
+      "price": 475,
+      "floor_plan": [
+        {
+          "description": "1 Balcony, 2/1",
+          "img": "102-S-LINCOLN-TYP-2-BR-1200x1255.jpg"
+        },
+        {
+          "description": "2 Balconies, 2/1",
+          "img": "102-S-LINCOLN-2-BR-DOUBLE-BALCONY-1200x1140.jpg"
+        }
+      ]
+    },
+    {
+      "bed": 2,
+      "bath": 1.5,
+      "price": 475,
+      "floor_plan": [
+        {
+          "description": "1 Balcony, 2/1.5",
+          "img": "102-S-LINCOLN-APT-104-1200x1334.jpg"
+        }
+      ]
+    },
+    {
+      "bed": 3,
+      "bath": 2,
+      "price": 435,
+      "floor_plan": [
+        {
+          "description": "1 Balcony, 3/2",
+          "img": "102-S-LINCOLN-TYP-3-BR-1200x1564.jpg"
+        }
+      ]
+    },
+    {
+      "bed": 4,
+      "bath": 2,
+      "price": 425,
+      "floor_plan": [
+        {
+          "description": "1 Balcony, 4/2",
+          "img": "102-S-LINCOLN-TYP-4-BR-1200x1599.jpg"
+        }
+      ]
+    }
+  ],
+  "amenities": [
+    "central a/c",
+    "sun deck",
+    "high speed internet",
+    "24 hr emergency maintenance",
+    "trash service",
+    "dishwasher and disposal",
+    "reserved covered parking available",
+    "washer/dryer on floor",
+    "interactive telecom"
+  ],
+  "website": "https://www.mhmproperties.com/property/102-s-lincoln-avenue/"
+}
