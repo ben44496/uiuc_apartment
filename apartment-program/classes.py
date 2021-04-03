@@ -24,7 +24,7 @@ class Option(object):
     def from_json(cls, data: dict):
         return cls(**data)
 
-    def to_string(self, num_indent):
+    def to_string(self, num_indent=0):
         string = ""
         string += num_indent * "\t" + "Bed(s): " + str(self.bed) + "\n"
         string += num_indent * "\t" + "Bath(s): " + str(self.bath) + "\n"
@@ -35,9 +35,24 @@ class Option(object):
         return string
 
 
-class Apartment(object):
+class Amenity(object):
 
-    def __init__(self, options: List[Option], amenities: List[str], address: str, agency: str,  website: str):
+    def __init__(self, name: str):
+        self.name = name
+
+    @classmethod
+    def from_json(cls, data: str):
+        return cls(data)
+
+    def to_string(self, num_indent=0):
+        string = ""
+        string += num_indent * "\t" + "-" + self.name + "\n"
+        return string
+
+
+class Property(object):
+
+    def __init__(self, options: List[Option], amenities: List[str], address: str, agency: str, website: str):
         # options: List[Option], amenities: List[str],
         self.address = address
         self.agency = agency
@@ -49,24 +64,23 @@ class Apartment(object):
     def from_json(cls, data: dict):
         # students = list(map(Student.from_json, data["students"]))
         options = list(map(Option.from_json, data["options"]))
-        amenities = list(map(str, data["amenities"]))
+        amenities = list(map(Amenity.from_json, data["amenities"]))
         return cls(options, amenities, data["address"], data["agency"], data["website"])
-        # return cls(**data)
 
-    def to_string(self, num_indent):
+    def to_string(self, num_indent=0):
         string = ""
-        string += num_indent * "\t" + "Address: " + str(self.address) + "\n"
+        string += num_indent * "\t" + "Address: " + str(self.address).upper() + "\n"
         string += num_indent * "\t" + "Agency: " + str(self.agency) + "\n"
 
+        # Print out all Option's at the Property
         string += num_indent * "\t" + "Living Options: " + "\n"
-        # print(type(self.options[0]))
         for option in self.options:
-            string += option.to_string(num_indent+1) + "\n"
+            string += option.to_string(num_indent + 1) + "\n"
 
+        # Print out all Amenity's at the Property
         string += num_indent * "\t" + "Amenities: " + "\n"
-        # TODO Should I make an ameneties class that just holds a list? Also weighted?
         for amenity in self.amenities:
-            string += (num_indent+1) * "\t" + "-"+str(amenity) + "\n"
+            string += amenity.to_string(num_indent + 1)
 
         string += num_indent * "\t" + "Website: " + str(self.website) + "\n"
         return string
@@ -74,26 +88,43 @@ class Apartment(object):
 
 class RealEstateAgency(object):
 
-    def __init__(self, name, properties: List[Apartment]):
+    def __init__(self, name, properties: List[Property]):
         self.name = name
-        self.properties_dict = self.construct_properties_dict(properties);
+        self.properties = properties
 
-    def construct_properties_dict(self, properties=[]):
-        # TODO: Finish construct properties dictionary mapping addresses to Apartment objects
-        property_dict = {}
-        for property in properties:
-            p = Apartment()
-            property_dict[property.get_address()] = property
-        return property_dict
+    # def construct_properties_dict(self, properties=[]):
+    #     # TODO: Finish construct properties dictionary mapping addresses to Apartment objects
+    #     property_dict = {}
+    #     for property in properties:
+    #         p = Property()
+    #         property_dict[property.get_address()] = property
+    #     return property_dict
 
-    def search_properties(self, address):
-        if address in self.properties_dict:
-            return self.properties_dict[address]
-        print("Address not found")
-        return None
+    # def search_properties(self, address: str):
+    #     address = address.lower()
+    #     if address in self.properties_dict:
+    #         return self.properties_dict[address]
+    #     print("Address not found")
+    #     return None
 
     def get_name(self):
         return self.name
 
     def get_properties(self):
         return self.properties
+
+    @classmethod
+    def from_json(cls, data: dict):
+        properties = list(map(Property.from_json, data["properties"]))
+        return cls(data["name"], properties)
+
+    def to_string(self, num_indent=0):
+        string = ""
+        string += num_indent * "\t" + "Name: " + str(self.name) + "\n"
+
+        for property in self.properties:
+            string += property.to_string(num_indent + 1) + "\n"
+            string += 80*"-"
+            string += 2*"\n"
+
+        return string

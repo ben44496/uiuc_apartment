@@ -1,66 +1,249 @@
 {
-  "agency": "mhm",
-  "address": "102 S Lincoln Avenue",
-  "options": [
-    {
-      "bed": 2,
-      "bath": 1,
-      "price": 475,
-      "floor_plan": [
-        {
-          "description": "1 Balcony, 2/1",
-          "img": "102-S-LINCOLN-TYP-2-BR-1200x1255.jpg"
-        },
-        {
-          "description": "2 Balconies, 2/1",
-          "img": "102-S-LINCOLN-2-BR-DOUBLE-BALCONY-1200x1140.jpg"
-        }
-      ]
+    "MHM" : {
+        "name" : "MHM",
+        "properties": [
+            {
+                "agency" : "MHM",
+                "address" : "102 S Lincoln Avenue",
+                "options" : [
+                    {
+                        "bed" : 2,
+                        "bath" : 1,
+                        "price" : 475,
+                        "floor_plan" : [
+                            {
+                                "description" : "1 Balcony, 2/1",
+                                "img" : "102-S-LINCOLN-TYP-2-BR-1200x1255.jpg"
+                            },
+                            {
+                                "description" : "2 Balconies, 2/1",
+                                "img" : "102-S-LINCOLN-2-BR-DOUBLE-BALCONY-1200x1140.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 2,
+                        "bath" : 1.5,
+                        "price" : 475,
+                        "floor_plan" : [
+                            {
+                                "description" : "1 Balcony, 2/1.5",
+                                "img" : "102-S-LINCOLN-APT-104-1200x1334.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 3,
+                        "bath" : 2,
+                        "price" : 435,
+                        "floor_plan" : [
+                            {
+                                "description" : "1 Balcony, 3/2",
+                                "img" : "102-S-LINCOLN-TYP-3-BR-1200x1564.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 4,
+                        "bath" : 2,
+                        "price" : 425,
+                        "floor_plan" : [
+                            {
+                                "description" : "1 Balcony, 4/2",
+                                "img" : "102-S-LINCOLN-TYP-4-BR-1200x1599.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "amenities" : [
+                    "central a/c",
+                    "sun deck",
+                    "high speed internet",
+                    "24 hr emergency maintenance",
+                    "trash service",
+                    "dishwasher and disposal",
+                    "reserved covered parking available",
+                    "washer/dryer on floor",
+                    "interactive telecom"
+                ],
+                "website" : "https://www.mhmproperties.com/property/102-s-lincoln-avenue/"
+            },
+            {
+                "agency" : "MHM",
+                "address" : "311 E Clark Street",
+                "options" : [
+                    {
+                        "bed" : 2,
+                        "bath" : 1,
+                        "price" : 525,
+                        "floor_plan" : [
+                            {
+                                "description" : "Apt 101/102",
+                                "img" : "311-E-CLARK-APT-101102-G-1-1200x1553.jpg"
+                            },
+                            {
+                                "description" : "Typical 2/1",
+                                "img" : "311-E-CLARK-TYP-2-BR-G-1200x1680.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 3,
+                        "bath" : 1,
+                        "price" : 485,
+                        "floor_plan" : [
+                            {
+                                "description" : "Typical 3/1",
+                                "img" : "311-E-CLARK-1200x729.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "amenities" : [
+                    "in-unit washer/dryer",
+                    "high speed fiber internet",
+                    "dishwasher and disposal",
+                    "balcony",
+                    "large kitchen",
+                    "reserved covered parking available",
+                    "24 hr emergency maintenance"
+                ],
+                "website" : "https://www.mhmproperties.com/property/311-e-clark-street/"
+            },
+            {
+                "agency" : "MHM",
+                "address" : "805 S Locust Street",
+                "options" : [
+                    {
+                        "bed" : 2,
+                        "bath" : 1,
+                        "price" : 435,
+                        "floor_plan" : [
+                            {
+                                "description" : "Apt A&B. 2/1",
+                                "img" : "805-S-LOCUST-APT-AB-1200x1403.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 4,
+                        "bath" : 1,
+                        "price" : 385,
+                        "floor_plan" : [
+                            {
+                                "description" : "Apt C&D, 4/1",
+                                "img" : "805-S-LOCUST-APT-CD-1200x1001.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "amenities" : [
+                    "high speed fiber internet",
+                    "large rooms",
+                    "full baths",
+                    "on-site laundry",
+                    "extra closets",
+                    "balcony/patio",
+                    "countertop bar",
+                    "central a/c",
+                    "large kitchen",
+                    "dishwasher and disposal",
+                    "24 hr emergency maintenance"
+                ],
+                "website" : "https://www.mhmproperties.com/property/805-s-locust-street/"
+            },
+            {
+                "agency" : "MHM",
+                "address" : "203 S Fourth Street",
+                "options" : [
+                    {
+                        "bed" : 1,
+                        "bath" : 1,
+                        "price" : 860,
+                        "floor_plan" : [
+                            {
+                                "description" : "#101 Ground Floor. 1/1",
+                                "img" : null
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 1,
+                        "bath" : 1,
+                        "price" : 925,
+                        "floor_plan" : [
+                            {
+                                "description" : "#203 Second Floor. 1/1",
+                                "img" : null
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 2,
+                        "bath" : 1,
+                        "price" : null,
+                        "floor_plan" : [
+                            {
+                                "description" : "2/1",
+                                "img" : "203SFourth-Floorplan-5.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 3,
+                        "bath" : 2,
+                        "price" : 575,
+                        "floor_plan" : [
+                            {
+                                "description" : "Staircase to upper floor. 3/2",
+                                "img" : "203SFourth-Floorplan-6-1200x927.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 4,
+                        "bath" : 3,
+                        "price" : 575,
+                        "floor_plan" : [
+                            {
+                                "description" : null,
+                                "img" : null
+                            }
+                        ]
+                    },
+                    {
+                        "bed" : 4,
+                        "bath" : 2,
+                        "price" : 565,
+                        "floor_plan" : [
+                            {
+                                "description" : null,
+                                "img" : null
+                            }
+                        ]
+                    }
+                ],
+                "amenities" : [
+                    "secure entry with intercom",
+                    "central a/c",
+                    "large bedrooms",
+                    "full baths",
+                    "24 hr emergency maintenance",
+                    "in-unit washer/dryer",
+                    "skylight",
+                    "balcony",
+                    "sundeck",
+                    "high speed fiber internet",
+                    "ceiling fan",
+                    "large kitchen",
+                    "reserved covered parking available"
+                ],
+                "website" : "https://www.mhmproperties.com/property/203-s-fourth-street/"
+            }
+        ]
     },
-    {
-      "bed": 2,
-      "bath": 1.5,
-      "price": 475,
-      "floor_plan": [
-        {
-          "description": "1 Balcony, 2/1.5",
-          "img": "102-S-LINCOLN-APT-104-1200x1334.jpg"
-        }
-      ]
-    },
-    {
-      "bed": 3,
-      "bath": 2,
-      "price": 435,
-      "floor_plan": [
-        {
-          "description": "1 Balcony, 3/2",
-          "img": "102-S-LINCOLN-TYP-3-BR-1200x1564.jpg"
-        }
-      ]
-    },
-    {
-      "bed": 4,
-      "bath": 2,
-      "price": 425,
-      "floor_plan": [
-        {
-          "description": "1 Balcony, 4/2",
-          "img": "102-S-LINCOLN-TYP-4-BR-1200x1599.jpg"
-        }
-      ]
+    "JSM" : {
+        "name" : "JSM",
+        "properties" : []
     }
-  ],
-  "amenities": [
-    "central a/c",
-    "sun deck",
-    "high speed internet",
-    "24 hr emergency maintenance",
-    "trash service",
-    "dishwasher and disposal",
-    "reserved covered parking available",
-    "washer/dryer on floor",
-    "interactive telecom"
-  ],
-  "website": "https://www.mhmproperties.com/property/102-s-lincoln-avenue/"
 }
