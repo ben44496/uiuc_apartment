@@ -1,11 +1,12 @@
 from typing import List
+import copy
 
 
 class FloorPlan(object):
 
-    def __init__(self):
-        self.description = ""
-        self.img = ""
+    def __init__(self, description: str, img: str):
+        self.description = description
+        self.img = img
 
     @classmethod
     def from_json(cls, data: dict):
@@ -52,7 +53,7 @@ class Amenity(object):
 
 class Property(object):
 
-    def __init__(self, options: List[Option], amenities: List[str], address: str, agency: str, website: str):
+    def __init__(self, options: List[Option], amenities: List[Amenity], address: str, agency: str, website: str):
         # options: List[Option], amenities: List[str],
         self.address = address
         self.agency = agency
@@ -85,6 +86,9 @@ class Property(object):
         string += num_indent * "\t" + "Website: " + str(self.website) + "\n"
         return string
 
+    def as_dict(self):
+        return copy.deepcopy(self.__dict__)
+
 
 class RealEstateAgency(object):
 
@@ -100,12 +104,15 @@ class RealEstateAgency(object):
     #         property_dict[property.get_address()] = property
     #     return property_dict
 
-    # def search_properties(self, address: str):
-    #     address = address.lower()
-    #     if address in self.properties_dict:
-    #         return self.properties_dict[address]
-    #     print("Address not found")
-    #     return None
+    def search_properties(self, address: str):
+        # TODO: Implement property search method which searches for the address within the agency
+        address = address.lower()
+
+        if address in self.properties:
+            return self.properties[address]
+
+        print("Address not found")
+        return None
 
     def get_name(self):
         return self.name
@@ -120,11 +127,23 @@ class RealEstateAgency(object):
 
     def to_string(self, num_indent=0):
         string = ""
-        string += num_indent * "\t" + "Name: " + str(self.name) + "\n"
 
+        # Name
+        string += num_indent * "\t" + "Management Agency: " + str(self.name) + "\n"
+
+        # Properties
         for property in self.properties:
             string += property.to_string(num_indent + 1) + "\n"
-            string += 80*"-"
-            string += 2*"\n"
+
+            # Separate the properties
+            string += 80 * "-"
+            string += 2 * "\n"
+
+        # Separate between different Management Groups
+        string += 80*"="
+        string += "\n"
 
         return string
+
+# TODO: Make all to_string methods into an interface and have classes implement
+# TODO: Method to add in a new property under agency and append to json.
